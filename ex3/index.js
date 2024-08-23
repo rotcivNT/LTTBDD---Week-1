@@ -12,10 +12,10 @@ const WINNER_LOG = {
 
 // const dolphinAvgScore = dolphinsScore.reduce((cur, pre) => {
 //     return cur + pre
-// },0)
+// },0) / dolphinsScore.length
 // const koalasAvgScore = koalasScore.reduce((cur, pre) => {
 //     return cur + pre
-// },0)
+// },0) / koalasScore.length
 
 
 // const winner = dolphinAvgScore > koalasAvgScore? "DOLPHIN" : dolphinAvgScore < koalasAvgScore? "KOALA" : "DRAW"
@@ -24,23 +24,23 @@ const WINNER_LOG = {
 
 // Bonus test case 1 - include requirement for score at least 100
 
-// const dolphinsScore = [97, 112, 101]
-// const koalasScore = [109, 95, 123]
+const dolphinsScore = [97, 112, 101]
+const koalasScore = [109, 95, 123]
 
-// const dolphinAvgScore = dolphinsScore.reduce((cur, pre) => {
-//     return cur + pre
-// },0)
-// const koalasAvgScore = koalasScore.reduce((cur, pre) => {
-//     return cur + pre
-// },0)
+const dolphinAvgScore = dolphinsScore.reduce((cur, pre) => {
+    return cur + pre
+},0) / dolphinsScore.length
+const koalasAvgScore = koalasScore.reduce((cur, pre) => {
+    return cur + pre
+},0) / koalasScore.length
 
-// let winner = WINNER_LOG["DRAW"]
+let winner = WINNER_LOG["DRAW"]
 
-// if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
-//     winner = WINNER_LOG["DOLPHIN"]
-// } else if (koalasAvgScore  > dolphinAvgScore && koalasAvgScore >= 100) {
-//     winner = WINNER_LOG["KOALA"]
-// }
+if (dolphinAvgScore > koalasAvgScore && dolphinAvgScore >= 100) {
+    winner = WINNER_LOG["DOLPHIN"]
+} else if (koalasAvgScore  > dolphinAvgScore && koalasAvgScore >= 100) {
+    winner = WINNER_LOG["KOALA"]
+}
 
-// console.log(winner)
+console.log(winner)
 
